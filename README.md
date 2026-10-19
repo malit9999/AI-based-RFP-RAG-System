@@ -11,7 +11,7 @@
 <p align="center">
   <b>AI8기 중급 프로젝트 | Team 1</b><br/>
   AI-based RFP RAG System for public procurement document analysis <br><br>
-  유연정(PM) · 정설아(데이터처리) · 정봄(데이터처리) · 박찬영(Retrieval) · 박민성(Generation)
+  PM · 데이터 처리 · Retrieval · Generation — 5인 팀
 </p>
 
 <p align="center">
@@ -41,14 +41,14 @@
 ```
 AI-based-RFP-RAG-System/
 │
-├── final_code_com_03.ipynb         # ★ 최종 통합 파이프라인 — 검색·생성·평가 (박민성)
+├── final_code_com_03.ipynb         # ★ 최종 통합 파이프라인 — 검색·생성·평가 (Generation 파트)
 ├── service/                        # ★ 최종 서비스 — Streamlit BidMate
 ├── RFP-X_최종보고서_Team1_v9.pdf   # ★ 최종 프로젝트 보고서
 │
 ├── notebooks/                      # 단계별 작업 노트북
-│   ├── final_data_01.ipynb         #   HWP/PDF 파싱, 청킹, ChromaDB 구축 (정설아·정봄)
-│   ├── retrieval_V9.ipynb          #   Retrieval 파이프라인 (박찬영)
-│   └── prom09.ipynb                #   프롬프트 엔지니어링 및 Generation 파이프라인 (박민성)
+│   ├── final_data_01.ipynb         #   HWP/PDF 파싱, 청킹, ChromaDB 구축 (데이터 처리 파트)
+│   ├── retrieval_V9.ipynb          #   Retrieval 파이프라인 (Retrieval 파트)
+│   └── prom09.ipynb                #   프롬프트 엔지니어링 및 Generation 파이프라인 (Generation 파트)
 │
 ├── archive/                        # 이전 버전
 │   └── com_02.ipynb                #   통합 파이프라인 이전 버전
@@ -179,13 +179,13 @@ ollama pull hf.co/lmstudio-community/EXAONE-3.5-7.8B-Instruct-GGUF
 
 ## 👥 팀 구성 및 역할
 
-| 이름 | 역할 |
+| 파트 | 역할 |
 |------|------|
-| 유연정 | PM · 평가 설계 총괄 · eval_batch 통합 검수 |
-| 정설아 | 데이터 전처리 · HWP 파싱 · ChromaDB 구축 |
-| 정봄 | 데이터 전처리 · PDF 파싱 · ChromaDB 구축 |
-| 박찬영 | Retrieval · Hybrid Search 구현 · 검색 파이프라인 V1~V12 |
-| 박민성 | Generation · 프롬프트 엔지니어링 · 통합 파이프라인 · Streamlit 서빙 |
+| PM | 평가 설계 총괄 · eval_batch 통합 검수 |
+| 데이터 처리 | 데이터 전처리 · HWP 파싱 · ChromaDB 구축 |
+| 데이터 처리 | 데이터 전처리 · PDF 파싱 · ChromaDB 구축 |
+| Retrieval | Hybrid Search 구현 · 검색 파이프라인 V1~V12 |
+| Generation | 프롬프트 엔지니어링 · 통합 파이프라인 · Streamlit 서빙 |
 
 ---
 
