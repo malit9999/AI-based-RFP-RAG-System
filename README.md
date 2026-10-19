@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://www.notion.so/AI8-_-_1-RFP-X-35e1fffab02c80d9ae52daa9a6b5fa5a">📋 협업노트/회의록 & 프로젝트 가이드</a>
-  　<a href="https://github.com/elena89y/AI-based-RFP-RAG-System/blob/main/RFP-X_%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%84%9C_Team1_v9.pdf">📄 팀 보고서 PDF</a>
+  　<a href="./RFP-X_%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%84%9C_Team1_v9.pdf">📄 팀 보고서 PDF</a>
 </p>
 
 ---
@@ -41,21 +41,29 @@
 ```
 AI-based-RFP-RAG-System/
 │
-├── data/                           # 원본 RFP 문서 및 전처리 데이터
-├── service/                        # Streamlit BidMate 서빙 코드
+├── final_code_com_03.ipynb         # ★ 최종 통합 파이프라인 — 검색·생성·평가 (박민성)
+├── service/                        # ★ 최종 서비스 — Streamlit BidMate
+├── RFP-X_최종보고서_Team1_v9.pdf   # ★ 최종 프로젝트 보고서
 │
-├── final_data_01.ipynb             # HWP/PDF 파싱, 청킹, ChromaDB 구축 (정설아·정봄)
-├── retrieval_V9.ipynb              # Retrieval 파이프라인 (박찬영)
-├── prom09.ipynb                    # 프롬프트 엔지니어링 및 Generation 파이프라인 (박민성)
-├── final_code_com_03.ipynb         # 통합 평가 파이프라인 (박민성)
-├── com_02.ipynb                    # 평가 데이터셋 통합 및 검수
-├── generation_final_report.md      # Generation 파트 실험 보고서
-├── project_code_guide.md           # 프로젝트 코드 실행 가이드
-├── RFP-X_최종보고서_Team1_v9.pdf   # 최종 프로젝트 보고서
+├── notebooks/                      # 단계별 작업 노트북
+│   ├── final_data_01.ipynb         #   HWP/PDF 파싱, 청킹, ChromaDB 구축 (정설아·정봄)
+│   ├── retrieval_V9.ipynb          #   Retrieval 파이프라인 (박찬영)
+│   └── prom09.ipynb                #   프롬프트 엔지니어링 및 Generation 파이프라인 (박민성)
+│
+├── archive/                        # 이전 버전
+│   └── com_02.ipynb                #   통합 파이프라인 이전 버전
+│
+├── docs/                           # 보고서·가이드
+│   ├── generation_final_report.md  #   Generation 파트 실험 보고서
+│   └── project_code_guide.md       #   서비스 구현 가이드
+│
+├── data/                           # 문서 메타데이터 · 평가셋 (pm_data.xlsx)
 │
 ├── .gitignore
 └── README.md
 ```
+
+★ 표시가 프로젝트의 최종 결과물입니다. 나머지는 단계별 작업 기록입니다.
 
 ---
 
@@ -100,9 +108,9 @@ AI-based-RFP-RAG-System/
 ### 1. 환경 설정
 
 ```bash
-git clone https://github.com/elena89y/AI-based-RFP-RAG-System.git
+git clone https://github.com/malit9999/AI-based-RFP-RAG-System.git
 cd AI-based-RFP-RAG-System
-pip install -r requirements.txt
+pip install -r service/requirements.txt
 ```
 
 ### 2. Ollama 모델 설치
@@ -121,11 +129,11 @@ ollama pull hf.co/lmstudio-community/EXAONE-3.5-7.8B-Instruct-GGUF
 ### 3. 실행 순서
 
 ```
-1. final_data_01.ipynb          → HWP/PDF 파싱, 청킹, ChromaDB 구축
-2. retrieval_V9.ipynb           → Hybrid Search 검색 파이프라인 실행
-3. prom09.ipynb                 → 프롬프트 설계 및 Generation 파이프라인
-4. final_code_com_03.ipynb      → 통합 평가 파이프라인 (RAGAS + 커스텀 지표)
-5. service/                     → Streamlit BidMate UI 실행
+1. notebooks/final_data_01.ipynb   → HWP/PDF 파싱, 청킹, ChromaDB 구축
+2. notebooks/retrieval_V9.ipynb    → Hybrid Search 검색 파이프라인 실행
+3. notebooks/prom09.ipynb          → 프롬프트 설계 및 Generation 파이프라인
+4. final_code_com_03.ipynb         → 통합 평가 파이프라인 (RAGAS + 커스텀 지표)
+5. service/                        → Streamlit BidMate UI 실행
 ```
 
 ---
