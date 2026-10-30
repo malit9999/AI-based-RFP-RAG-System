@@ -82,6 +82,17 @@ AI-based-RFP-RAG-System/
 | **생성 모델** | gemma4:e4b (Ollama 로컬, 서비스용) / EXAONE-3.5 7.8B (프롬프트 실험용) |
 | **서빙** | Streamlit (BidMate UI) |
 
+### 검토한 로컬 후보 모델 (Generation 파트)
+
+| 구분 | 모델 |
+|------|------|
+| **정량 평가 결과가 남은 모델** | `gemma4:e4b` (서비스 모델) · `EXAONE-3.5 7.8B` (프롬프트 실험 모델) |
+| 직접 띄워 검토한 모델 | `qwen2.5` 3b · 7b · 14b, `qwen3` 8b · 14b, `llama3.1` 8b, `gemma4` e2b |
+| 보고서 표의 후보 (설치 기록 없음) | `phi-4` 14B |
+
+> 위 모델을 모두 같은 지표로 평가한 것은 아닙니다. 정량 평가 결과가 남은 것은 `gemma4:e4b`와 `EXAONE-3.5 7.8B` 두 모델이며,
+> 나머지는 직접 띄워 검토한 후보입니다. 선정 근거는 [Generation 파트 실험 보고서](./docs/generation_final_report.md) §1.2에 있습니다.
+
 ### 평가 프레임워크
 
 | 구성 요소 | 기술 |
